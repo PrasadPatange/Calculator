@@ -1,10 +1,9 @@
-let display = document.getElementById('display');
+let display = document.getElementById("display");
 
-<<<<<<< HEAD
 let buttons = Array.from(document.getElementsByClassName("button"));
 buttons.map((button) => {
   button.addEventListener("click", (e) => {
-    console.log("Clicked :",e.target.innerText)
+    console.log("Clicked :", e.target.innerText);
     switch (e.target.innerText) {
       case "C":
         display.innerText = "";
@@ -26,35 +25,7 @@ buttons.map((button) => {
         break;
     }
   });
-=======
-let buttons = Array.from(document.getElementsByClassName('button'));
-
-buttons.map( button =>{
-    button.addEventListener('click' , (e) =>{
-        switch (e.target.innerText) {
-            case "C":
-                display.innerText = '';
-                break;
-            case "←":
-                if(display.innerText){
-                 display.innerText = display.innerText.slice(0,-1);
-                }
-                break;
-            case "=":
-                try {
-                    display.innerText = eval(display.innerText);
-                } catch (error) {
-                    display.innerText = "Error! Invalid Operation!"
-                }
-                break;
-            default:
-                display.innerText += e.target.innerText;
-                break;
-         }
-     });
->>>>>>> master
 });
-
 // Current Date
 const today = (dt) => {
   let date = dt.getDate();
@@ -99,4 +70,3 @@ const Timmer = setInterval(() => {
   let timmer = document.getElementById("time");
   timmer.innerText = time;
 }, 1000);
-
