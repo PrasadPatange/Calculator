@@ -3,7 +3,7 @@ let display = document.getElementById("display");
 let buttons = Array.from(document.getElementsByClassName("button"));
 buttons.map((button) => {
   button.addEventListener("click", (e) => {
-    
+    console.log("Clicked :",e.target.innerText)
     switch (e.target.innerText) {
       case "C":
         display.innerText = "";
